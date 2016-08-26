@@ -13,6 +13,9 @@
 		070005681D707F390002B956 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 070005661D707F390002B956 /* Main.storyboard */; };
 		0700056A1D707F390002B956 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 070005691D707F390002B956 /* Assets.xcassets */; };
 		0700056D1D707F390002B956 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0700056B1D707F390002B956 /* LaunchScreen.storyboard */; };
+		070005791D70800F0002B956 /* SmartKeys.xib in Resources */ = {isa = PBXBuildFile; fileRef = 070005741D70800F0002B956 /* SmartKeys.xib */; };
+		0700057A1D70800F0002B956 /* SmartKeysView.m in Sources */ = {isa = PBXBuildFile; fileRef = 070005751D70800F0002B956 /* SmartKeysView.m */; };
+		0700057B1D70800F0002B956 /* SmartKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 070005771D70800F0002B956 /* SmartKeys.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,11 @@
 		070005691D707F390002B956 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0700056C1D707F390002B956 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0700056E1D707F390002B956 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		070005741D70800F0002B956 /* SmartKeys.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SmartKeys.xib; sourceTree = "<group>"; };
+		070005751D70800F0002B956 /* SmartKeysView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmartKeysView.m; sourceTree = "<group>"; };
+		070005761D70800F0002B956 /* SmartKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmartKeys.h; sourceTree = "<group>"; };
+		070005771D70800F0002B956 /* SmartKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmartKeys.m; sourceTree = "<group>"; };
+		070005781D70800F0002B956 /* SmartKeysView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmartKeysView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,11 @@
 		0700055C1D707F390002B956 /* smartkeys */ = {
 			isa = PBXGroup;
 			children = (
+				070005741D70800F0002B956 /* SmartKeys.xib */,
+				070005751D70800F0002B956 /* SmartKeysView.m */,
+				070005761D70800F0002B956 /* SmartKeys.h */,
+				070005771D70800F0002B956 /* SmartKeys.m */,
+				070005781D70800F0002B956 /* SmartKeysView.h */,
 				070005601D707F390002B956 /* AppDelegate.h */,
 				070005611D707F390002B956 /* AppDelegate.m */,
 				070005631D707F390002B956 /* ViewController.h */,
@@ -137,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0700056D1D707F390002B956 /* LaunchScreen.storyboard in Resources */,
+				070005791D70800F0002B956 /* SmartKeys.xib in Resources */,
 				0700056A1D707F390002B956 /* Assets.xcassets in Resources */,
 				070005681D707F390002B956 /* Main.storyboard in Resources */,
 			);
@@ -149,6 +163,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0700057A1D70800F0002B956 /* SmartKeysView.m in Sources */,
+				0700057B1D70800F0002B956 /* SmartKeys.m in Sources */,
 				070005651D707F390002B956 /* ViewController.m in Sources */,
 				070005621D707F390002B956 /* AppDelegate.m in Sources */,
 				0700055F1D707F390002B956 /* main.m in Sources */,

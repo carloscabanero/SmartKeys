@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+@interface CoolEditBox : UITextField
+@end
+
 @interface ViewController : UIViewController
 
 

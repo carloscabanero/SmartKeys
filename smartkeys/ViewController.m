@@ -7,16 +7,27 @@
 //
 
 #import "ViewController.h"
+#import "SmartKeys.h"
+#import "SmartKeysView.h"
 
-@interface ViewController ()
+
+
+@interface ViewController () <UITextFieldDelegate>
 
 @end
 
-@implementation ViewController
-
+@implementation ViewController {
+    SmartKeys *_smartKeys;
+    __weak IBOutlet UITextField *textField;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    if (!_smartKeys) {
+        _smartKeys = [[SmartKeys alloc] init];
+        _smartKeys.textInputDelegate = textField;
+    }
+    textField.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,4 +35,21 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (UIView *)inputAccessoryView {
+    return [_smartKeys view];
+}
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    NSUInteger modifiers = [(SmartKeysView *)[_smartKeys view] modifiers];
+    if (modifiers & KbdCtrlModifier) {
+        textField.text = [textField.text stringByReplacingCharactersInRange:range withString:[NSString stringWithFormat:@"^%@", string]];
+
+    } else if (modifiers & KbdAltModifier) {
+        textField.text = [textField.text stringByReplacingCharactersInRange:range withString:[NSString stringWithFormat:@"⌥%@", string]];
+    } else {
+        textField.text = [textField.text stringByReplacingCharactersInRange:range withString:string];
+    }
+    return NO;
+}
 @end
