@@ -67,10 +67,10 @@
 			isa = PBXGroup;
 			children = (
 				070005741D70800F0002B956 /* SmartKeys.xib */,
+				070005781D70800F0002B956 /* SmartKeysView.h */,
 				070005751D70800F0002B956 /* SmartKeysView.m */,
 				070005761D70800F0002B956 /* SmartKeys.h */,
 				070005771D70800F0002B956 /* SmartKeys.m */,
-				070005781D70800F0002B956 /* SmartKeysView.h */,
 				070005601D707F390002B956 /* AppDelegate.h */,
 				070005611D707F390002B956 /* AppDelegate.m */,
 				070005631D707F390002B956 /* ViewController.h */,
@@ -318,6 +318,7 @@
 				070005731D707F390002B956 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
