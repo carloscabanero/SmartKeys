@@ -18,16 +18,16 @@
 
 @implementation ViewController {
     SmartKeys *_smartKeys;
-    __weak IBOutlet UITextField *textField;
+    __weak IBOutlet UITextField *sampleTextField;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     if (!_smartKeys) {
         _smartKeys = [[SmartKeys alloc] init];
-        _smartKeys.textInputDelegate = textField;
+        _smartKeys.textInputDelegate = sampleTextField;
     }
-    textField.delegate = self;
+    sampleTextField.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
