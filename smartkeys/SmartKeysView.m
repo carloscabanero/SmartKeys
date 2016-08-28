@@ -44,22 +44,49 @@ NSString *const KbdTabKey = @"⇥";
   __weak IBOutlet UIButton *_ctrlButton;
   __weak IBOutlet UIButton *_altButton;
   __weak IBOutlet UIStackView *_stack;
+    BOOL isLongPress;
 }
 
 - (void)awakeFromNib
 {
   self.translatesAutoresizingMaskIntoConstraints = NO;
+    [self setupModifierButtons];
+}
+
+- (void)setupModifierButtons{
+    [_ctrlButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateSelected];
+    [_altButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateSelected];
+    
+    UITapGestureRecognizer *ctrlTapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(modifierButtonTapped:)];
+    ctrlTapGesture.numberOfTapsRequired = 1;
+    UILongPressGestureRecognizer *ctrlLongPressGesture = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(longPressOnModifierButton:)];
+
+    [_ctrlButton addGestureRecognizer:ctrlTapGesture];
+    [_ctrlButton addGestureRecognizer:ctrlLongPressGesture];
+
+    UITapGestureRecognizer *altTapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(modifierButtonTapped:)];
+    altTapGesture.numberOfTapsRequired = 1;
+    UILongPressGestureRecognizer *altLongPressGesture = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(longPressOnModifierButton:)];
+    
+    [_altButton addGestureRecognizer:altTapGesture];
+    [_altButton addGestureRecognizer:altLongPressGesture];
 }
 
 - (NSUInteger)modifiers
 {
   // No need to use the tag, as modifiers are predefined.
   NSUInteger modifiers = 0;
-  if (_ctrlButton.highlighted) {
-    modifiers |= KbdCtrlModifier;
+  if (_ctrlButton.selected) {
+      modifiers |= KbdCtrlModifier;
+      if(!isLongPress){
+          _ctrlButton.selected = NO;
+      }
   }
-  if (_altButton.highlighted) {
-    modifiers |= KbdAltModifier;
+  if (_altButton.selected) {
+      modifiers |= KbdAltModifier;
+      if(!isLongPress){
+          _altButton.selected = NO;
+      }
   }
 
   return modifiers;
@@ -73,6 +100,22 @@ NSString *const KbdTabKey = @"⇥";
 - (UIInputViewStyle)inputViewStyle
 {
   return UIInputViewStyleDefault;
+}
+
+- (void)modifierButtonTapped:(UITapGestureRecognizer*)gesture{
+    UIButton *selectedButton = (UIButton*)gesture.view;
+    [selectedButton setSelected:!selectedButton.isSelected];
+}
+
+- (void)longPressOnModifierButton:(UILongPressGestureRecognizer*)gesture{
+    UIButton *selectedButton = (UIButton*)gesture.view;
+    if(gesture.state == UIGestureRecognizerStateBegan){
+        [selectedButton setSelected:YES];
+        isLongPress = YES;
+    } else if(gesture.state == UIGestureRecognizerStateEnded){
+        [selectedButton setSelected:NO];
+        isLongPress = NO;
+    }
 }
 
 @end
