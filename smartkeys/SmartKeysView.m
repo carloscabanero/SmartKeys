@@ -60,6 +60,7 @@ NSString *const KbdTabKey = @"⇥";
     UITapGestureRecognizer *ctrlTapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(modifierButtonTapped:)];
     ctrlTapGesture.numberOfTapsRequired = 1;
     UILongPressGestureRecognizer *ctrlLongPressGesture = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(longPressOnModifierButton:)];
+    ctrlLongPressGesture.minimumPressDuration = 0.3;
 
     [_ctrlButton addGestureRecognizer:ctrlTapGesture];
     [_ctrlButton addGestureRecognizer:ctrlLongPressGesture];
@@ -67,6 +68,7 @@ NSString *const KbdTabKey = @"⇥";
     UITapGestureRecognizer *altTapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(modifierButtonTapped:)];
     altTapGesture.numberOfTapsRequired = 1;
     UILongPressGestureRecognizer *altLongPressGesture = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(longPressOnModifierButton:)];
+    altLongPressGesture.minimumPressDuration = 0.3;
     
     [_altButton addGestureRecognizer:altTapGesture];
     [_altButton addGestureRecognizer:altLongPressGesture];
@@ -103,6 +105,7 @@ NSString *const KbdTabKey = @"⇥";
 }
 
 - (void)modifierButtonTapped:(UITapGestureRecognizer*)gesture{
+    [self modifiers];
     UIButton *selectedButton = (UIButton*)gesture.view;
     [selectedButton setSelected:!selectedButton.isSelected];
 }
