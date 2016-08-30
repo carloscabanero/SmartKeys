@@ -41,15 +41,19 @@
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
-    NSUInteger modifiers = [(SmartKeysView *)[_smartKeys view] modifiers];
-    if (modifiers & KbdCtrlModifier) {
-        textField.text = [textField.text stringByReplacingCharactersInRange:range withString:[NSString stringWithFormat:@"^%@", string]];
+    if(![string isEqualToString:@""]){
+        NSUInteger modifiers = [(SmartKeysView *)[_smartKeys view] modifiers];
+        if (modifiers & KbdCtrlModifier) {
+            textField.text = [textField.text stringByReplacingCharactersInRange:range withString:[NSString stringWithFormat:@"^%@", string]];
 
-    } else if (modifiers & KbdAltModifier) {
-        textField.text = [textField.text stringByReplacingCharactersInRange:range withString:[NSString stringWithFormat:@"⌥%@", string]];
+        } else if (modifiers & KbdAltModifier) {
+            textField.text = [textField.text stringByReplacingCharactersInRange:range withString:[NSString stringWithFormat:@"⌥%@", string]];
+        } else {
+            textField.text = [textField.text stringByReplacingCharactersInRange:range withString:string];
+        }
+        return NO;
     } else {
-        textField.text = [textField.text stringByReplacingCharactersInRange:range withString:string];
+        return YES;
     }
-    return NO;
 }
 @end
