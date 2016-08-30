@@ -64,6 +64,13 @@
   } else {
     symbol = [NSString stringWithString:key];
   }
+    
+    NSUInteger modifiers = [(SmartKeysView *)[self view] modifiers];
+    if (modifiers & KbdCtrlModifier) {
+        symbol = [NSString stringWithFormat:@"^%@",symbol];
+    } else if(modifiers & KbdAltModifier) {
+        symbol = [NSString stringWithFormat:@"⌥%@",symbol]; 
+    }
 
   _timer = [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(symbolEmit:) userInfo:symbol repeats:YES];
   [_timer fire];
