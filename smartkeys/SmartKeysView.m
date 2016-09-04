@@ -37,13 +37,14 @@ NSString *const KbdUpArrowKey = @"▲";
 NSString *const KbdDownArrowKey = @"▼";
 NSString *const KbdEscKey = @"⎋";
 NSString *const KbdTabKey = @"⇥";
-
+int const kNonModifierCount = 7;
 
 @implementation SmartKeysView {
   NSTimer *_timer;
   __weak IBOutlet UIButton *_ctrlButton;
   __weak IBOutlet UIButton *_altButton;
   __weak IBOutlet UIStackView *_stack;
+    __weak IBOutlet UIScrollView *_nonModifierScrollView;
     BOOL isLongPress;
 }
 
@@ -51,6 +52,9 @@ NSString *const KbdTabKey = @"⇥";
 {
   self.translatesAutoresizingMaskIntoConstraints = NO;
     [self setupModifierButtons];
+    dispatch_after(10, dispatch_get_main_queue(), ^{
+        [_nonModifierScrollView setContentSize:CGSizeMake(kNonModifierCount*42, 32)];
+    });
 }
 
 - (void)setupModifierButtons{
@@ -96,7 +100,7 @@ NSString *const KbdTabKey = @"⇥";
 
 - (void)show
 {
-  self.hidden = NO;
+    self.hidden = NO;
 }
 
 - (UIInputViewStyle)inputViewStyle
@@ -119,6 +123,9 @@ NSString *const KbdTabKey = @"⇥";
         [selectedButton setSelected:NO];
         isLongPress = NO;
     }
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
 }
 
 @end

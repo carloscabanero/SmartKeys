@@ -45,7 +45,7 @@ typedef NS_OPTIONS(NSInteger, KbdModifiers) {
 };
 
 
-@interface SmartKeysView : UIView
+@interface SmartKeysView : UIView<UIScrollViewDelegate>
 
 @property (readonly) NSUInteger modifiers;
 
