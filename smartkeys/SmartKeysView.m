@@ -51,10 +51,8 @@ int const kNonModifierCount = 7;
 - (void)awakeFromNib
 {
   self.translatesAutoresizingMaskIntoConstraints = NO;
+    _nonModifierScrollView.translatesAutoresizingMaskIntoConstraints = NO;
     [self setupModifierButtons];
-    dispatch_after(10, dispatch_get_main_queue(), ^{
-        [_nonModifierScrollView setContentSize:CGSizeMake(kNonModifierCount*42, 32)];
-    });
 }
 
 - (void)setupModifierButtons{

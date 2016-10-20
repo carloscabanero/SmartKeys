@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SmartKeys">
@@ -12,23 +14,20 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="SmartKeysView">
-            <rect key="frame" x="0.0" y="0.0" width="498" height="51"/>
+            <rect key="frame" x="0.0" y="0.0" width="680" height="51"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="6Kk-Wl-VMp">
-                    <rect key="frame" x="0.0" y="0.0" width="498" height="52"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="gZY-hv-cSn">
-                            <rect key="frame" x="0.0" y="8" width="70" height="36"/>
                             <subviews>
                                 <button opaque="NO" alpha="0.84999999999999998" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="sH7-VZ-MHD">
-                                    <rect key="frame" x="0.0" y="0.0" width="32" height="36"/>
-                                    <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                     <inset key="contentEdgeInsets" minX="0.0" minY="11" maxX="0.0" maxY="0.0"/>
                                     <state key="normal" title="⌃">
-                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -37,15 +36,14 @@
                                     </userDefinedRuntimeAttributes>
                                 </button>
                                 <button opaque="NO" alpha="0.84999999999999998" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="GpG-1n-e3f">
-                                    <rect key="frame" x="38" y="0.0" width="32" height="36"/>
-                                    <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                     <state key="normal" title="⌥">
-                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
                                     <state key="selected">
-                                        <color key="titleColor" red="0.55294117649999996" green="0.5568627451" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="titleColor" red="0.55294117649999996" green="0.5568627451" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -55,157 +53,156 @@
                                 </button>
                             </subviews>
                             <constraints>
-                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="74" id="6im-0d-kO2"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="74" id="6im-0d-kO2"/>
                             </constraints>
                         </stackView>
                         <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="276" placeholderIntrinsicHeight="36" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpT-52-KRm">
-                            <rect key="frame" x="76" y="8" width="290" height="36"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kdC-6W-Bp4">
-                                    <rect key="frame" x="7" y="0.0" width="276" height="36"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kdC-6W-Bp4" userLabel="Content View">
                                     <subviews>
-                                        <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="M6x-b3-Jdc">
-                                            <rect key="frame" x="-1" y="0.0" width="35" height="36"/>
-                                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                            <state key="normal" title="⎋">
-                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            </state>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                    <integer key="value" value="5"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                            <connections>
-                                                <action selector="symbolDown:" destination="-1" eventType="touchDown" id="MIF-iA-k7y"/>
-                                                <action selector="symbolUp:" destination="-1" eventType="touchUpInside" id="Mbr-iz-d2C"/>
-                                                <action selector="symbolUp:" destination="-1" eventType="touchUpOutside" id="TLb-aD-eSQ"/>
-                                                <action selector="symbolUp:" destination="-1" eventType="touchDragExit" id="zRn-FJ-1ME"/>
-                                            </connections>
-                                        </button>
-                                        <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="fcy-fW-gvy">
-                                            <rect key="frame" x="40" y="0.0" width="34" height="36"/>
-                                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                            <state key="normal" title="⇥">
-                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            </state>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                    <integer key="value" value="5"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                            <connections>
-                                                <action selector="symbolDown:" destination="-1" eventType="touchDown" id="Z2W-NV-3zm"/>
-                                                <action selector="symbolUp:" destination="-1" eventType="touchUpOutside" id="J2I-Us-CUz"/>
-                                                <action selector="symbolUp:" destination="-1" eventType="touchUpInside" id="cmA-dU-p79"/>
-                                                <action selector="symbolUp:" destination="-1" eventType="touchDragExit" id="zKa-SJ-iHN"/>
-                                            </connections>
-                                        </button>
-                                        <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="sCY-KI-2iN">
-                                            <rect key="frame" x="80" y="0.0" width="35" height="36"/>
-                                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                            <state key="normal" title="-">
-                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            </state>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                    <integer key="value" value="5"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                            <connections>
-                                                <action selector="symbolDown:" destination="-1" eventType="touchDown" id="0xj-Xw-jCK"/>
-                                                <action selector="symbolUp:" destination="-1" eventType="touchUpInside" id="JrN-7G-u8m"/>
-                                                <action selector="symbolUp:" destination="-1" eventType="touchDragExit" id="f2Y-np-7VZ"/>
-                                                <action selector="symbolUp:" destination="-1" eventType="touchUpOutside" id="p7c-z4-siA"/>
-                                            </connections>
-                                        </button>
-                                        <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="E3p-OH-ZH9">
-                                            <rect key="frame" x="120" y="0.0" width="34" height="36"/>
-                                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                            <state key="normal" title="_">
-                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            </state>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                    <integer key="value" value="5"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                            <connections>
-                                                <action selector="symbolDown:" destination="-1" eventType="touchDown" id="AXQ-0l-nwh"/>
-                                                <action selector="symbolUp:" destination="-1" eventType="touchUpOutside" id="1lU-rJ-s5J"/>
-                                                <action selector="symbolUp:" destination="-1" eventType="touchUpInside" id="4K0-TV-Hpt"/>
-                                                <action selector="symbolUp:" destination="-1" eventType="touchDragExit" id="tpc-td-jXc"/>
-                                            </connections>
-                                        </button>
-                                        <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="ozY-wd-Qn8">
-                                            <rect key="frame" x="160" y="0.0" width="35" height="36"/>
-                                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                            <state key="normal" title="~">
-                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            </state>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                    <integer key="value" value="5"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                            <connections>
-                                                <action selector="symbolDown:" destination="-1" eventType="touchDown" id="z31-3f-aNL"/>
-                                                <action selector="symbolUp:" destination="-1" eventType="touchUpInside" id="2WK-dR-GMt"/>
-                                                <action selector="symbolUp:" destination="-1" eventType="touchDragExit" id="4ea-6j-pMr"/>
-                                                <action selector="symbolUp:" destination="-1" eventType="touchUpOutside" id="ikV-8p-Iwh"/>
-                                            </connections>
-                                        </button>
-                                        <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="BtN-SO-flq">
-                                            <rect key="frame" x="201" y="0.0" width="34" height="36"/>
-                                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                            <state key="normal" title="@">
-                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            </state>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                    <integer key="value" value="5"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                            <connections>
-                                                <action selector="symbolDown:" destination="-1" eventType="touchDown" id="7g8-Mf-ccx"/>
-                                                <action selector="symbolUp:" destination="-1" eventType="touchUpOutside" id="AoP-fY-Ced"/>
-                                                <action selector="symbolUp:" destination="-1" eventType="touchDragExit" id="Ugr-RO-ecz"/>
-                                                <action selector="symbolUp:" destination="-1" eventType="touchUpInside" id="c02-Iy-phv"/>
-                                            </connections>
-                                        </button>
-                                        <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="HeB-bs-d7g">
-                                            <rect key="frame" x="241" y="0.0" width="35" height="36"/>
-                                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                            <state key="normal" title="*">
-                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            </state>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                    <integer key="value" value="5"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                            <connections>
-                                                <action selector="symbolDown:" destination="-1" eventType="touchDown" id="gB5-wz-l7Q"/>
-                                                <action selector="symbolUp:" destination="-1" eventType="touchDragExit" id="avz-ZD-W82"/>
-                                                <action selector="symbolUp:" destination="-1" eventType="touchUpInside" id="lL8-qV-OTD"/>
-                                                <action selector="symbolUp:" destination="-1" eventType="touchUpOutside" id="wzi-KW-HhY"/>
-                                            </connections>
-                                        </button>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="nMq-RS-zea">
+                                            <subviews>
+                                                <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="Hx4-kJ-xbh">
+                                                    <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <state key="normal" title="⎋">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="symbolDown:" destination="-1" eventType="touchDown" id="MVL-gw-Sno"/>
+                                                        <action selector="symbolUp:" destination="-1" eventType="touchUpOutside" id="ewr-k0-pFJ"/>
+                                                        <action selector="symbolUp:" destination="-1" eventType="touchDragExit" id="i67-iz-OqA"/>
+                                                        <action selector="symbolUp:" destination="-1" eventType="touchUpInside" id="vLf-w5-IDc"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="mqG-WJ-kux">
+                                                    <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <state key="normal" title="*">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="symbolDown:" destination="-1" eventType="touchDown" id="Wt2-Dn-Bau"/>
+                                                        <action selector="symbolUp:" destination="-1" eventType="touchUpOutside" id="Ebz-Ua-mDR"/>
+                                                        <action selector="symbolUp:" destination="-1" eventType="touchUpInside" id="hkk-r9-Yyr"/>
+                                                        <action selector="symbolUp:" destination="-1" eventType="touchDragExit" id="ycO-Li-ai9"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="yBj-Uh-yH9">
+                                                    <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <state key="normal" title="~">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="symbolDown:" destination="-1" eventType="touchDown" id="BIC-jL-ZTQ"/>
+                                                        <action selector="symbolUp:" destination="-1" eventType="touchUpOutside" id="HXO-90-Vq4"/>
+                                                        <action selector="symbolUp:" destination="-1" eventType="touchDragExit" id="HYH-78-Z6l"/>
+                                                        <action selector="symbolUp:" destination="-1" eventType="touchUpInside" id="Mgx-sj-E69"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="HdU-Yi-JYs">
+                                                    <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <state key="normal" title="-">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="symbolDown:" destination="-1" eventType="touchDown" id="49I-1m-z4I"/>
+                                                        <action selector="symbolUp:" destination="-1" eventType="touchDragExit" id="6Pv-R1-Fle"/>
+                                                        <action selector="symbolUp:" destination="-1" eventType="touchUpOutside" id="8OD-NK-7hY"/>
+                                                        <action selector="symbolUp:" destination="-1" eventType="touchUpInside" id="PDD-g6-q2j"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="IJa-fa-LwK">
+                                                    <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <state key="normal" title="@">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="symbolDown:" destination="-1" eventType="touchDown" id="fXx-3Y-b81"/>
+                                                        <action selector="symbolUp:" destination="-1" eventType="touchUpOutside" id="Lcc-K7-U38"/>
+                                                        <action selector="symbolUp:" destination="-1" eventType="touchDragExit" id="WNo-p0-2fz"/>
+                                                        <action selector="symbolUp:" destination="-1" eventType="touchUpInside" id="u6N-TO-6gV"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="Iwc-1c-4uQ">
+                                                    <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <state key="normal" title="⇥">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="symbolDown:" destination="-1" eventType="touchDown" id="OXJ-1x-NEU"/>
+                                                        <action selector="symbolUp:" destination="-1" eventType="touchUpOutside" id="0Yd-Vw-rfn"/>
+                                                        <action selector="symbolUp:" destination="-1" eventType="touchDragExit" id="Krj-Nx-o96"/>
+                                                        <action selector="symbolUp:" destination="-1" eventType="touchUpInside" id="iES-0q-QfR"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="yOZ-kQ-LZ1">
+                                                    <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <state key="normal" title="_">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="symbolDown:" destination="-1" eventType="touchDown" id="EeA-12-fSg"/>
+                                                        <action selector="symbolUp:" destination="-1" eventType="touchUpInside" id="Cb9-A4-HXV"/>
+                                                        <action selector="symbolUp:" destination="-1" eventType="touchUpOutside" id="ebf-bF-DtR"/>
+                                                        <action selector="symbolUp:" destination="-1" eventType="touchDragExit" id="fzP-Xg-CaD"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
                                     </subviews>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
+                                        <constraint firstItem="nMq-RS-zea" firstAttribute="leading" secondItem="kdC-6W-Bp4" secondAttribute="leading" id="3Xu-k1-BiH"/>
+                                        <constraint firstItem="nMq-RS-zea" firstAttribute="top" secondItem="kdC-6W-Bp4" secondAttribute="top" id="MN3-3w-Nzg"/>
+                                        <constraint firstAttribute="bottom" secondItem="nMq-RS-zea" secondAttribute="bottom" id="aW1-5c-Gme"/>
+                                        <constraint firstAttribute="trailing" secondItem="nMq-RS-zea" secondAttribute="trailing" id="xbR-t4-t1P"/>
                                         <constraint firstAttribute="height" constant="36" id="y5R-jh-5yn"/>
                                     </constraints>
                                 </view>
                             </subviews>
+                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
-                                <constraint firstItem="kdC-6W-Bp4" firstAttribute="centerY" secondItem="hpT-52-KRm" secondAttribute="centerY" id="PO9-zU-pgC"/>
                                 <constraint firstItem="kdC-6W-Bp4" firstAttribute="top" secondItem="hpT-52-KRm" secondAttribute="top" id="d9Z-1n-2nh"/>
                                 <constraint firstItem="kdC-6W-Bp4" firstAttribute="centerX" secondItem="hpT-52-KRm" secondAttribute="centerX" id="jLk-6I-IhB"/>
                                 <constraint firstAttribute="trailing" secondItem="kdC-6W-Bp4" secondAttribute="trailing" constant="7" id="kfN-I3-Mve"/>
@@ -217,14 +214,12 @@
                             </connections>
                         </scrollView>
                         <stackView opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="o5R-mY-Oea">
-                            <rect key="frame" x="372" y="8" width="127" height="36"/>
                             <subviews>
                                 <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="8RZ-A0-yTp">
-                                    <rect key="frame" x="0.0" y="0.0" width="32" height="36"/>
-                                    <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                     <state key="normal" title="▲">
-                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
                                     <connections>
                                         <action selector="symbolDown:" destination="-1" eventType="touchDown" id="qNU-wF-M8K"/>
@@ -234,11 +229,10 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="bGu-3Y-xyl">
-                                    <rect key="frame" x="32" y="0.0" width="32" height="36"/>
-                                    <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                     <state key="normal" title="▼">
-                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
                                     <connections>
                                         <action selector="symbolDown:" destination="-1" eventType="touchDown" id="La9-sv-gjh"/>
@@ -248,11 +242,10 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="YR8-Kv-37f">
-                                    <rect key="frame" x="63" y="0.0" width="32" height="36"/>
-                                    <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                     <state key="normal" title="◀︎">
-                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
                                     <connections>
                                         <action selector="symbolDown:" destination="-1" eventType="touchDown" id="2pO-OC-ZDu"/>
@@ -262,11 +255,10 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="HQL-Qw-FWv">
-                                    <rect key="frame" x="95" y="0.0" width="32" height="36"/>
-                                    <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                     <state key="normal" title="▶︎">
-                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
                                     <connections>
                                         <action selector="symbolDown:" destination="-1" eventType="touchDown" id="A8g-1f-D4F"/>
@@ -277,12 +269,13 @@
                                 </button>
                             </subviews>
                             <constraints>
-                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="136" id="H7b-Dr-muU"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="136" id="H7b-Dr-muU"/>
                             </constraints>
                         </stackView>
                     </subviews>
                     <constraints>
                         <constraint firstItem="o5R-mY-Oea" firstAttribute="leading" secondItem="hpT-52-KRm" secondAttribute="trailing" constant="6" id="B7H-9X-gFa"/>
+                        <constraint firstItem="kdC-6W-Bp4" firstAttribute="width" relation="greaterThanOrEqual" secondItem="o5R-mY-Oea" secondAttribute="width" multiplier="2" id="SNd-jj-CvP"/>
                         <constraint firstItem="hpT-52-KRm" firstAttribute="top" secondItem="6Kk-Wl-VMp" secondAttribute="top" constant="8" id="cUy-zf-R0N"/>
                         <constraint firstAttribute="height" priority="250" id="lZq-9j-iho"/>
                         <constraint firstItem="hpT-52-KRm" firstAttribute="leading" secondItem="gZY-hv-cSn" secondAttribute="trailing" constant="6" id="wnD-15-5bX"/>
@@ -302,15 +295,15 @@
                 <outlet property="_stack" destination="6Kk-Wl-VMp" id="cVl-oS-iJx"/>
                 <outlet property="nonModifierScrollView" destination="hpT-52-KRm" id="kUO-Gb-eoC"/>
             </connections>
-            <point key="canvasLocation" x="605" y="250.5"/>
+            <point key="canvasLocation" x="696" y="250.5"/>
         </view>
         <button opaque="NO" alpha="0.84999999999999998" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="clip" id="2Xk-q5-848">
             <rect key="frame" x="0.0" y="0.0" width="90" height="35"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <fontDescription key="fontDescription" type="system" pointSize="20"/>
             <state key="normal" title="⌥">
-                <color key="titleColor" red="0.43921568630000002" green="0.88235294119999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                <color key="titleColor" red="0.43921568630000002" green="0.88235294119999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             </state>
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -322,11 +315,11 @@
         <button opaque="NO" alpha="0.84999999999999998" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="clip" id="UUz-s8-FwS">
             <rect key="frame" x="0.0" y="0.0" width="90" height="35"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <fontDescription key="fontDescription" type="system" pointSize="20"/>
             <inset key="contentEdgeInsets" minX="0.0" minY="11" maxX="0.0" maxY="0.0"/>
             <state key="normal" title="⌃">
-                <color key="titleColor" red="0.4392156862745098" green="0.88235294117647056" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                <color key="titleColor" red="0.4392156862745098" green="0.88235294117647056" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             </state>
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -338,10 +331,10 @@
         <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" id="J3B-lJ-DD3">
             <rect key="frame" x="0.0" y="0.0" width="99" height="35"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <fontDescription key="fontDescription" type="system" pointSize="20"/>
             <state key="normal" title="/">
-                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             </state>
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -356,145 +349,5 @@
             </connections>
             <point key="canvasLocation" x="272.5" y="336.5"/>
         </button>
-        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" id="nMq-RS-zea">
-            <rect key="frame" x="0.0" y="0.0" width="276" height="36"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <subviews>
-                <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="Hx4-kJ-xbh">
-                    <rect key="frame" x="0.0" y="0.0" width="34.5" height="36"/>
-                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                    <state key="normal" title="⎋">
-                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                            <integer key="value" value="5"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <action selector="symbolDown:" destination="-1" eventType="touchDown" id="MVL-gw-Sno"/>
-                        <action selector="symbolUp:" destination="-1" eventType="touchUpOutside" id="ewr-k0-pFJ"/>
-                        <action selector="symbolUp:" destination="-1" eventType="touchDragExit" id="i67-iz-OqA"/>
-                        <action selector="symbolUp:" destination="-1" eventType="touchUpInside" id="vLf-w5-IDc"/>
-                    </connections>
-                </button>
-                <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="mqG-WJ-kux">
-                    <rect key="frame" x="40.5" y="0.0" width="34" height="36"/>
-                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                    <state key="normal" title="*">
-                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                            <integer key="value" value="5"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <action selector="symbolDown:" destination="-1" eventType="touchDown" id="Wt2-Dn-Bau"/>
-                        <action selector="symbolUp:" destination="-1" eventType="touchUpOutside" id="Ebz-Ua-mDR"/>
-                        <action selector="symbolUp:" destination="-1" eventType="touchUpInside" id="hkk-r9-Yyr"/>
-                        <action selector="symbolUp:" destination="-1" eventType="touchDragExit" id="ycO-Li-ai9"/>
-                    </connections>
-                </button>
-                <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="yBj-Uh-yH9">
-                    <rect key="frame" x="80.5" y="0.0" width="34.5" height="36"/>
-                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                    <state key="normal" title="~">
-                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                            <integer key="value" value="5"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <action selector="symbolDown:" destination="-1" eventType="touchDown" id="BIC-jL-ZTQ"/>
-                        <action selector="symbolUp:" destination="-1" eventType="touchUpOutside" id="HXO-90-Vq4"/>
-                        <action selector="symbolUp:" destination="-1" eventType="touchDragExit" id="HYH-78-Z6l"/>
-                        <action selector="symbolUp:" destination="-1" eventType="touchUpInside" id="Mgx-sj-E69"/>
-                    </connections>
-                </button>
-                <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="HdU-Yi-JYs">
-                    <rect key="frame" x="121" y="0.0" width="34" height="36"/>
-                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                    <state key="normal" title="-">
-                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                            <integer key="value" value="5"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <action selector="symbolDown:" destination="-1" eventType="touchDown" id="49I-1m-z4I"/>
-                        <action selector="symbolUp:" destination="-1" eventType="touchDragExit" id="6Pv-R1-Fle"/>
-                        <action selector="symbolUp:" destination="-1" eventType="touchUpOutside" id="8OD-NK-7hY"/>
-                        <action selector="symbolUp:" destination="-1" eventType="touchUpInside" id="PDD-g6-q2j"/>
-                    </connections>
-                </button>
-                <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="IJa-fa-LwK">
-                    <rect key="frame" x="161" y="0.0" width="34.5" height="36"/>
-                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                    <state key="normal" title="@">
-                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                            <integer key="value" value="5"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <action selector="symbolDown:" destination="-1" eventType="touchDown" id="fXx-3Y-b81"/>
-                        <action selector="symbolUp:" destination="-1" eventType="touchUpOutside" id="Lcc-K7-U38"/>
-                        <action selector="symbolUp:" destination="-1" eventType="touchDragExit" id="WNo-p0-2fz"/>
-                        <action selector="symbolUp:" destination="-1" eventType="touchUpInside" id="u6N-TO-6gV"/>
-                    </connections>
-                </button>
-                <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="Iwc-1c-4uQ">
-                    <rect key="frame" x="201.5" y="0.0" width="34" height="36"/>
-                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                    <state key="normal" title="⇥">
-                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                            <integer key="value" value="5"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <action selector="symbolDown:" destination="-1" eventType="touchDown" id="OXJ-1x-NEU"/>
-                        <action selector="symbolUp:" destination="-1" eventType="touchUpOutside" id="0Yd-Vw-rfn"/>
-                        <action selector="symbolUp:" destination="-1" eventType="touchDragExit" id="Krj-Nx-o96"/>
-                        <action selector="symbolUp:" destination="-1" eventType="touchUpInside" id="iES-0q-QfR"/>
-                    </connections>
-                </button>
-                <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="yOZ-kQ-LZ1">
-                    <rect key="frame" x="241.5" y="0.0" width="34.5" height="36"/>
-                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                    <state key="normal" title="_">
-                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                            <integer key="value" value="5"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <action selector="symbolDown:" destination="-1" eventType="touchDown" id="EeA-12-fSg"/>
-                        <action selector="symbolUp:" destination="-1" eventType="touchUpInside" id="Cb9-A4-HXV"/>
-                        <action selector="symbolUp:" destination="-1" eventType="touchUpOutside" id="ebf-bF-DtR"/>
-                        <action selector="symbolUp:" destination="-1" eventType="touchDragExit" id="fzP-Xg-CaD"/>
-                    </connections>
-                </button>
-            </subviews>
-            <point key="canvasLocation" x="567" y="565"/>
-        </stackView>
     </objects>
 </document>
