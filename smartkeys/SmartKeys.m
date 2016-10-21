@@ -33,6 +33,8 @@
 
 
 static NSArray *HelperKeys = nil;
+static NSArray *ArrowKeys = nil;
+static NSArray *FKeys = nil;
 
 @implementation SmartKeys {
   NSTimer *_timer;
@@ -45,52 +47,94 @@ static NSArray *HelperKeys = nil;
   HelperKeys = @[
 		 [[SmartKey alloc]initWithName:KbdEscKey symbol:UIKeyInputEscape], 
 		    [[SmartKey alloc] initWithName:KbdTabKey symbol:@"\t"],
-		    [[SmartKey alloc] initWithName:@"*" symbol:@"*"]];									  
+		    [[SmartKey alloc] initWithName:@"*" symbol:@"*"]
+		 ];
+  
+  ArrowKeys = @[
+		[[SmartKey alloc]initWithName:KbdUpArrowKey symbol:UIKeyInputUpArrow],
+		   [[SmartKey alloc]initWithName:KbdDownArrowKey symbol:UIKeyInputDownArrow],
+		   [[SmartKey alloc]initWithName:KbdLeftArrowKey symbol:UIKeyInputLeftArrow],
+		   [[SmartKey alloc]initWithName:KbdRightArrowKey symbol:UIKeyInputRightArrow]
+		];
+
+  FKeys = @[
+	    [[SmartKey alloc]initWithName:@"F1" symbol:@""],
+	    [[SmartKey alloc]initWithName:@"F2" symbol:@""],
+	    [[SmartKey alloc]initWithName:@"F3" symbol:@""],
+	    [[SmartKey alloc]initWithName:@"F4" symbol:@""],
+	    [[SmartKey alloc]initWithName:@"F5" symbol:@""],
+	    [[SmartKey alloc]initWithName:@"F6" symbol:@""],
+	    [[SmartKey alloc]initWithName:@"F7" symbol:@""],
+	    [[SmartKey alloc]initWithName:@"F8" symbol:@""],
+	    [[SmartKey alloc]initWithName:@"F9" symbol:@""],
+	    [[SmartKey alloc]initWithName:@"F10" symbol:@""]];
 }
 
 - (void)viewDidLoad 
 {
   [self.view setNonModifiers:HelperKeys];
+  self.view.delegate = self;
 }
 
-- (IBAction)symbolUp:(UIButton *)sender
+- (void)symbolUp:(NSString *)symbol
 {
   if (_timer != nil) {
     [_timer invalidate];
   }
 }
 
-- (IBAction)symbolDown:(UIButton *)sender
+- (void)symbolDown:(NSString *)symbol
 {
-  NSString *key = sender.titleLabel.text;
-  NSString *symbol;
-
-  if ([key isEqualToString:KbdUpArrowKey]) {
-    symbol = UIKeyInputUpArrow;
-  } else if ([key isEqualToString:KbdDownArrowKey]) {
-    symbol = UIKeyInputDownArrow;
-  } else if ([key isEqualToString:KbdLeftArrowKey]) {
-    symbol = UIKeyInputLeftArrow;
-  } else if ([key isEqualToString:KbdRightArrowKey]) {
-    symbol = UIKeyInputRightArrow;
-  } else if ([key isEqualToString:KbdTabKey]) {
-    symbol = @"\t";
-  } else if ([key isEqualToString:KbdEscKey]) {
-    symbol = UIKeyInputEscape;
-  } else {
-    symbol = [NSString stringWithString:key];
-  }
-    
-    NSUInteger modifiers = [self.view modifiers];
-    if (modifiers & KbdCtrlModifier) {
-        symbol = [NSString stringWithFormat:@"^%@",symbol];
-    } else if(modifiers & KbdAltModifier) {
-        symbol = [NSString stringWithFormat:@"⌥%@",symbol]; 
+  SmartKey *pressedKey;
+  for (SmartKey *key in HelperKeys) {
+    if (key.name == symbol) {
+      pressedKey = key;
     }
+  }
 
-  _timer = [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(symbolEmit:) userInfo:symbol repeats:YES];
-  [_timer fire];
+  _timer = [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(symbolEmit:) userInfo:pressedKey.symbol repeats:YES];
+  [_timer fire];  
 }
+
+// - (void)nonModifierUp:(UIButton *)sender
+// {
+//   if (_timer != nil) {
+//     [_timer invalidate];
+//   }
+// }
+
+// - (void)symbolDown:(UIButton *)sender
+// {
+//     NSLog(@"Woork");
+//   NSString *key = sender.titleLabel.text;
+//   NSString *symbol;
+
+//   if ([key isEqualToString:KbdUpArrowKey]) {
+//     symbol = UIKeyInputUpArrow;
+//   } else if ([key isEqualToString:KbdDownArrowKey]) {
+//     symbol = UIKeyInputDownArrow;
+//   } else if ([key isEqualToString:KbdLeftArrowKey]) {
+//     symbol = UIKeyInputLeftArrow;
+//   } else if ([key isEqualToString:KbdRightArrowKey]) {
+//     symbol = UIKeyInputRightArrow;
+//   } else if ([key isEqualToString:KbdTabKey]) {
+//     symbol = @"\t";
+//   } else if ([key isEqualToString:KbdEscKey]) {
+//     symbol = UIKeyInputEscape;
+//   } else {
+//     symbol = [NSString stringWithString:key];
+//   }
+    
+//     NSUInteger modifiers = [self.view modifiers];
+//     if (modifiers & KbdCtrlModifier) {
+//         symbol = [NSString stringWithFormat:@"^%@",symbol];
+//     } else if(modifiers & KbdAltModifier) {
+//         symbol = [NSString stringWithFormat:@"⌥%@",symbol];
+//     }
+
+//   _timer = [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(symbolEmit:) userInfo:symbol repeats:YES];
+//   [_timer fire];
+// }
 
 - (void)symbolEmit:(NSTimer *)timer
 {

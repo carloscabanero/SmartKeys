@@ -69,12 +69,6 @@
                                     <state key="normal" title="▲">
                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
-                                    <connections>
-                                        <action selector="symbolDown:" destination="-1" eventType="touchDown" id="qNU-wF-M8K"/>
-                                        <action selector="symbolUp:" destination="-1" eventType="touchUpOutside" id="7Ku-Xl-Awb"/>
-                                        <action selector="symbolUp:" destination="-1" eventType="touchDragExit" id="hQi-Vd-9v1"/>
-                                        <action selector="symbolUp:" destination="-1" eventType="touchUpInside" id="x2i-7B-neJ"/>
-                                    </connections>
                                 </button>
                                 <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="bGu-3Y-xyl">
                                     <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -82,12 +76,6 @@
                                     <state key="normal" title="▼">
                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
-                                    <connections>
-                                        <action selector="symbolDown:" destination="-1" eventType="touchDown" id="La9-sv-gjh"/>
-                                        <action selector="symbolUp:" destination="-1" eventType="touchUpInside" id="KI8-Vo-etK"/>
-                                        <action selector="symbolUp:" destination="-1" eventType="touchDragExit" id="cL7-HY-Tz9"/>
-                                        <action selector="symbolUp:" destination="-1" eventType="touchUpOutside" id="o1r-y0-cVb"/>
-                                    </connections>
                                 </button>
                                 <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="YR8-Kv-37f">
                                     <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -95,12 +83,6 @@
                                     <state key="normal" title="◀︎">
                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
-                                    <connections>
-                                        <action selector="symbolDown:" destination="-1" eventType="touchDown" id="2pO-OC-ZDu"/>
-                                        <action selector="symbolUp:" destination="-1" eventType="touchUpOutside" id="7xF-Ua-R7z"/>
-                                        <action selector="symbolUp:" destination="-1" eventType="touchUpInside" id="BIf-Tb-mjx"/>
-                                        <action selector="symbolUp:" destination="-1" eventType="touchDragExit" id="L08-Pw-qab"/>
-                                    </connections>
                                 </button>
                                 <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="HQL-Qw-FWv">
                                     <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -108,12 +90,6 @@
                                     <state key="normal" title="▶︎">
                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
-                                    <connections>
-                                        <action selector="symbolDown:" destination="-1" eventType="touchDown" id="A8g-1f-D4F"/>
-                                        <action selector="symbolUp:" destination="-1" eventType="touchUpInside" id="CdV-Ke-GQh"/>
-                                        <action selector="symbolUp:" destination="-1" eventType="touchDragExit" id="TQL-fF-lSd"/>
-                                        <action selector="symbolUp:" destination="-1" eventType="touchUpOutside" id="mHY-P6-aNb"/>
-                                    </connections>
                                 </button>
                             </subviews>
                             <constraints>
@@ -190,12 +166,6 @@
                     <integer key="value" value="5"/>
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
-            <connections>
-                <action selector="symbolDown:" destination="-1" eventType="touchDown" id="BmL-he-bwN"/>
-                <action selector="symbolUp:" destination="-1" eventType="touchUpOutside" id="P5q-Bj-YIV"/>
-                <action selector="symbolUp:" destination="-1" eventType="touchUpInside" id="Raq-fZ-XOD"/>
-                <action selector="symbolUp:" destination="-1" eventType="touchDragExit" id="sCH-yV-tZG"/>
-            </connections>
             <point key="canvasLocation" x="272.5" y="336.5"/>
         </button>
         <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" id="nMq-RS-zea">
@@ -208,12 +178,6 @@
                     <state key="normal" title="⎋">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
-                    <connections>
-                        <action selector="symbolDown:" destination="-1" eventType="touchDown" id="MVL-gw-Sno"/>
-                        <action selector="symbolUp:" destination="-1" eventType="touchUpOutside" id="ewr-k0-pFJ"/>
-                        <action selector="symbolUp:" destination="-1" eventType="touchDragExit" id="i67-iz-OqA"/>
-                        <action selector="symbolUp:" destination="-1" eventType="touchUpInside" id="vLf-w5-IDc"/>
-                    </connections>
                 </button>
                 <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="mqG-WJ-kux">
                     <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -221,12 +185,6 @@
                     <state key="normal" title="*">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
-                    <connections>
-                        <action selector="symbolDown:" destination="-1" eventType="touchDown" id="Wt2-Dn-Bau"/>
-                        <action selector="symbolUp:" destination="-1" eventType="touchUpOutside" id="Ebz-Ua-mDR"/>
-                        <action selector="symbolUp:" destination="-1" eventType="touchUpInside" id="hkk-r9-Yyr"/>
-                        <action selector="symbolUp:" destination="-1" eventType="touchDragExit" id="ycO-Li-ai9"/>
-                    </connections>
                 </button>
                 <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="yBj-Uh-yH9">
                     <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -234,12 +192,6 @@
                     <state key="normal" title="~">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
-                    <connections>
-                        <action selector="symbolDown:" destination="-1" eventType="touchDown" id="BIC-jL-ZTQ"/>
-                        <action selector="symbolUp:" destination="-1" eventType="touchUpOutside" id="HXO-90-Vq4"/>
-                        <action selector="symbolUp:" destination="-1" eventType="touchDragExit" id="HYH-78-Z6l"/>
-                        <action selector="symbolUp:" destination="-1" eventType="touchUpInside" id="Mgx-sj-E69"/>
-                    </connections>
                 </button>
                 <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="HdU-Yi-JYs">
                     <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -247,12 +199,6 @@
                     <state key="normal" title="-">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
-                    <connections>
-                        <action selector="symbolDown:" destination="-1" eventType="touchDown" id="49I-1m-z4I"/>
-                        <action selector="symbolUp:" destination="-1" eventType="touchDragExit" id="6Pv-R1-Fle"/>
-                        <action selector="symbolUp:" destination="-1" eventType="touchUpOutside" id="8OD-NK-7hY"/>
-                        <action selector="symbolUp:" destination="-1" eventType="touchUpInside" id="PDD-g6-q2j"/>
-                    </connections>
                 </button>
                 <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="IJa-fa-LwK">
                     <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -260,12 +206,6 @@
                     <state key="normal" title="@">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
-                    <connections>
-                        <action selector="symbolDown:" destination="-1" eventType="touchDown" id="fXx-3Y-b81"/>
-                        <action selector="symbolUp:" destination="-1" eventType="touchUpOutside" id="Lcc-K7-U38"/>
-                        <action selector="symbolUp:" destination="-1" eventType="touchDragExit" id="WNo-p0-2fz"/>
-                        <action selector="symbolUp:" destination="-1" eventType="touchUpInside" id="u6N-TO-6gV"/>
-                    </connections>
                 </button>
                 <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="Iwc-1c-4uQ">
                     <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -273,12 +213,6 @@
                     <state key="normal" title="⇥">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
-                    <connections>
-                        <action selector="symbolDown:" destination="-1" eventType="touchDown" id="OXJ-1x-NEU"/>
-                        <action selector="symbolUp:" destination="-1" eventType="touchUpOutside" id="0Yd-Vw-rfn"/>
-                        <action selector="symbolUp:" destination="-1" eventType="touchDragExit" id="Krj-Nx-o96"/>
-                        <action selector="symbolUp:" destination="-1" eventType="touchUpInside" id="iES-0q-QfR"/>
-                    </connections>
                 </button>
                 <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="yOZ-kQ-LZ1">
                     <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -286,12 +220,6 @@
                     <state key="normal" title="_">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
-                    <connections>
-                        <action selector="symbolDown:" destination="-1" eventType="touchDown" id="EeA-12-fSg"/>
-                        <action selector="symbolUp:" destination="-1" eventType="touchUpInside" id="Cb9-A4-HXV"/>
-                        <action selector="symbolUp:" destination="-1" eventType="touchUpOutside" id="ebf-bF-DtR"/>
-                        <action selector="symbolUp:" destination="-1" eventType="touchDragExit" id="fzP-Xg-CaD"/>
-                    </connections>
                 </button>
             </subviews>
         </stackView>

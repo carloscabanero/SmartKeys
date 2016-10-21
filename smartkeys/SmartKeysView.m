@@ -54,6 +54,15 @@ int const kNonModifierCount = 7;
 
 @end
 
+@interface NonModifierButton : UIButton
+
+@property (readonly) SmartKey *key;
+
+- (id)initWithSmartKey:(SmartKey *)key;
+
+@end
+
+
 @implementation SmartKeysView {
   NSTimer *_timer;
   __weak IBOutlet UIButton *_ctrlButton;
@@ -63,6 +72,7 @@ int const kNonModifierCount = 7;
   __weak IBOutlet UIButton *_upArrowButton;
   BOOL isLongPress;
   UIStackView *_nonModifiersStack;
+  NSArray <SmartKey *> *_nonModifiersKeys;
 }
 
 - (void)awakeFromNib {
@@ -132,6 +142,7 @@ int const kNonModifierCount = 7;
   // TODO: Detach previous (if any)
   // Reattach new one
   _nonModifiersStack = [self smartKeysStackWith:keys];
+  _nonModifiersKeys = keys;
   
   [_nonModifierScrollView addSubview:_nonModifiersStack];
   
@@ -157,9 +168,23 @@ int const kNonModifierCount = 7;
     button.backgroundColor = [UIColor grayColor];
     [button setTitle:key.name forState:UIControlStateNormal];
     [stack addArrangedSubview:button];
+    [button addTarget:nil action:@selector(nonModifierUp:) forControlEvents:UIControlEventTouchUpInside];
+    [button addTarget:nil action:@selector(nonModifierUp:) forControlEvents:UIControlEventTouchUpOutside];
+    [button addTarget:nil action:@selector(nonModifierUp:) forControlEvents:UIControlEventTouchDragExit];
+    [button addTarget:nil action:@selector(nonModifierDown:) forControlEvents:UIControlEventTouchDown];
   }
   
   return stack;
+}
+
+- (void)nonModifierUp:(UIButton *)sender
+{
+  [self.delegate symbolUp:sender.currentTitle];
+}
+
+- (void)nonModifierDown:(UIButton *)sender
+{
+  [self.delegate symbolDown:sender.currentTitle];
 }
 
 - (UIInputViewStyle)inputViewStyle {

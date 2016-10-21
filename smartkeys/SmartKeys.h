@@ -34,9 +34,12 @@
 #include "SmartKeysView.h"
 
 
-@interface SmartKeys : UIViewController
+@interface SmartKeys : UIViewController <SmartKeysDelegate>
 
 @property(nonatomic, weak) id< UIKeyInput > textInputDelegate;
-@property (strong, nonatomic) SmartKeysView *view;
-							 
+@property(strong, nonatomic) SmartKeysView *view;
+
+-(void)symbolDown:(NSString *)symbol;
+-(void)symbolUp:(NSString *)symbol;
+
 @end

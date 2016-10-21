@@ -54,9 +54,17 @@ typedef NS_OPTIONS(NSInteger, KbdModifiers) {
 
 @end
 
+@protocol SmartKeysDelegate
+
+-(void)symbolUp:(NSString *)symbol;
+-(void)symbolDown:(NSString *)symbol;
+
+@end
+
 @interface SmartKeysView : UIView<UIScrollViewDelegate>
 
 @property (readonly) NSUInteger modifiers;
+@property (weak) id<SmartKeysDelegate> delegate;
 
 -(void)show;
 -(void)setNonModifiers:(NSArray <SmartKey *> *)keys;
