@@ -39,91 +39,151 @@ NSString *const KbdEscKey = @"⎋";
 NSString *const KbdTabKey = @"⇥";
 int const kNonModifierCount = 7;
 
+
+@implementation SmartKey  
+
+-(id)initWithName:(NSString *)name symbol:(NSString *)symbol
+{
+  self = [super init];
+  if (self) {
+    _name = name;
+    _symbol = symbol;
+  }
+  return self;
+}
+
+@end
+
 @implementation SmartKeysView {
   NSTimer *_timer;
   __weak IBOutlet UIButton *_ctrlButton;
   __weak IBOutlet UIButton *_altButton;
   __weak IBOutlet UIStackView *_stack;
-    __weak IBOutlet UIScrollView *_nonModifierScrollView;
-    BOOL isLongPress;
+  __weak IBOutlet UIScrollView *_nonModifierScrollView;
+  __weak IBOutlet UIButton *_upArrowButton;
+  BOOL isLongPress;
+  UIStackView *_nonModifiersStack;
 }
 
-- (void)awakeFromNib
-{
+- (void)awakeFromNib {
   self.translatesAutoresizingMaskIntoConstraints = NO;
-    _nonModifierScrollView.translatesAutoresizingMaskIntoConstraints = NO;
-    [self setupModifierButtons];
+  _nonModifierScrollView.translatesAutoresizingMaskIntoConstraints = NO;
+  [self setupModifierButtons];
 }
 
-- (void)setupModifierButtons{
-    [_ctrlButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateSelected];
-    [_altButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateSelected];
-    
-    UITapGestureRecognizer *ctrlTapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(modifierButtonTapped:)];
-    ctrlTapGesture.numberOfTapsRequired = 1;
-    UILongPressGestureRecognizer *ctrlLongPressGesture = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(longPressOnModifierButton:)];
-    ctrlLongPressGesture.minimumPressDuration = 0.3;
+- (void)setupModifierButtons {
+  [_ctrlButton setTitleColor:[UIColor lightGrayColor]
+                    forState:UIControlStateSelected];
+  [_altButton setTitleColor:[UIColor lightGrayColor]
+                   forState:UIControlStateSelected];
 
-    [_ctrlButton addGestureRecognizer:ctrlTapGesture];
-    [_ctrlButton addGestureRecognizer:ctrlLongPressGesture];
+  UITapGestureRecognizer *ctrlTapGesture = [[UITapGestureRecognizer alloc]
+      initWithTarget:self
+              action:@selector(modifierButtonTapped:)];
+  ctrlTapGesture.numberOfTapsRequired = 1;
+  UILongPressGestureRecognizer *ctrlLongPressGesture =
+      [[UILongPressGestureRecognizer alloc]
+          initWithTarget:self
+                  action:@selector(longPressOnModifierButton:)];
+  ctrlLongPressGesture.minimumPressDuration = 0.3;
 
-    UITapGestureRecognizer *altTapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(modifierButtonTapped:)];
-    altTapGesture.numberOfTapsRequired = 1;
-    UILongPressGestureRecognizer *altLongPressGesture = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(longPressOnModifierButton:)];
-    altLongPressGesture.minimumPressDuration = 0.3;
-    
-    [_altButton addGestureRecognizer:altTapGesture];
-    [_altButton addGestureRecognizer:altLongPressGesture];
+  [_ctrlButton addGestureRecognizer:ctrlTapGesture];
+  [_ctrlButton addGestureRecognizer:ctrlLongPressGesture];
+
+  UITapGestureRecognizer *altTapGesture = [[UITapGestureRecognizer alloc]
+      initWithTarget:self
+              action:@selector(modifierButtonTapped:)];
+  altTapGesture.numberOfTapsRequired = 1;
+  UILongPressGestureRecognizer *altLongPressGesture =
+      [[UILongPressGestureRecognizer alloc]
+          initWithTarget:self
+                  action:@selector(longPressOnModifierButton:)];
+  altLongPressGesture.minimumPressDuration = 0.3;
+
+  [_altButton addGestureRecognizer:altTapGesture];
+  [_altButton addGestureRecognizer:altLongPressGesture];
 }
 
-- (NSUInteger)modifiers
-{
+- (NSUInteger)modifiers {
   // No need to use the tag, as modifiers are predefined.
   NSUInteger modifiers = 0;
   if (_ctrlButton.selected) {
-      modifiers |= KbdCtrlModifier;
-      if(!isLongPress){
-          _ctrlButton.selected = NO;
-      }
+    modifiers |= KbdCtrlModifier;
+    if (!isLongPress) {
+      _ctrlButton.selected = NO;
+    }
   }
   if (_altButton.selected) {
-      modifiers |= KbdAltModifier;
-      if(!isLongPress){
-          _altButton.selected = NO;
-      }
+    modifiers |= KbdAltModifier;
+    if (!isLongPress) {
+      _altButton.selected = NO;
+    }
   }
 
   return modifiers;
 }
 
-- (void)show
-{
-    self.hidden = NO;
+- (void)show {
+  self.hidden = NO;
 }
 
-- (UIInputViewStyle)inputViewStyle
+- (void)setNonModifiers:(NSArray <SmartKey *> *)keys
 {
+  // TODO: Detach previous (if any)
+  // Reattach new one
+  _nonModifiersStack = [self smartKeysStackWith:keys];
+  
+  [_nonModifierScrollView addSubview:_nonModifiersStack];
+  
+  // Constraints
+  _nonModifiersStack.translatesAutoresizingMaskIntoConstraints = NO;
+  [_nonModifiersStack.topAnchor constraintEqualToAnchor:_nonModifierScrollView.topAnchor].active = YES;
+  [_nonModifiersStack.leadingAnchor constraintEqualToAnchor:_nonModifierScrollView.leadingAnchor].active = YES;
+  [_nonModifiersStack.trailingAnchor constraintEqualToAnchor:_nonModifierScrollView.trailingAnchor].active = YES;
+  [_nonModifiersStack.bottomAnchor constraintEqualToAnchor:_nonModifierScrollView.bottomAnchor].active = YES;
+  [_nonModifiersStack.arrangedSubviews[0].widthAnchor constraintGreaterThanOrEqualToAnchor:_upArrowButton.widthAnchor multiplier:1].active = YES;
+}
+
+- (UIStackView *)smartKeysStackWith:(NSArray <SmartKey *> *)keys
+{
+  // Configure Stack
+  UIStackView *stack = [[UIStackView alloc] init];
+
+  stack.axis = UILayoutConstraintAxisHorizontal;
+  stack.distribution = UIStackViewDistributionFillEqually;
+
+  for (SmartKey *key in keys) {
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.backgroundColor = [UIColor grayColor];
+    [button setTitle:key.name forState:UIControlStateNormal];
+    [stack addArrangedSubview:button];
+  }
+  
+  return stack;
+}
+
+- (UIInputViewStyle)inputViewStyle {
   return UIInputViewStyleDefault;
 }
 
-- (void)modifierButtonTapped:(UITapGestureRecognizer*)gesture{
-    [self modifiers];
-    UIButton *selectedButton = (UIButton*)gesture.view;
-    [selectedButton setSelected:!selectedButton.isSelected];
+- (void)modifierButtonTapped:(UITapGestureRecognizer *)gesture {
+  //[self modifiers];
+  UIButton *selectedButton = (UIButton *)gesture.view;
+  [selectedButton setSelected:!selectedButton.isSelected];
 }
 
-- (void)longPressOnModifierButton:(UILongPressGestureRecognizer*)gesture{
-    UIButton *selectedButton = (UIButton*)gesture.view;
-    if(gesture.state == UIGestureRecognizerStateBegan){
-        [selectedButton setSelected:YES];
-        isLongPress = YES;
-    } else if(gesture.state == UIGestureRecognizerStateEnded){
-        [selectedButton setSelected:NO];
-        isLongPress = NO;
-    }
+- (void)longPressOnModifierButton:(UILongPressGestureRecognizer *)gesture {
+  UIButton *selectedButton = (UIButton *)gesture.view;
+  if (gesture.state == UIGestureRecognizerStateBegan) {
+    [selectedButton setSelected:YES];
+    isLongPress = YES;
+  } else if (gesture.state == UIGestureRecognizerStateEnded) {
+    [selectedButton setSelected:NO];
+    isLongPress = NO;
+  }
 }
 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
 }
 
 @end

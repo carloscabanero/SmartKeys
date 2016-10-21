@@ -30,11 +30,27 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "SmartKeys.h"
-#import "SmartKeysView.h"
 
+
+static NSArray *HelperKeys = nil;
 
 @implementation SmartKeys {
   NSTimer *_timer;
+}
+
+@dynamic view;
+
++ (void)initialize {
+  // Make an object. Do not even there to use dicts
+  HelperKeys = @[
+		 [[SmartKey alloc]initWithName:KbdEscKey symbol:UIKeyInputEscape], 
+		    [[SmartKey alloc] initWithName:KbdTabKey symbol:@"\t"],
+		    [[SmartKey alloc] initWithName:@"*" symbol:@"*"]];									  
+}
+
+- (void)viewDidLoad 
+{
+  [self.view setNonModifiers:HelperKeys];
 }
 
 - (IBAction)symbolUp:(UIButton *)sender
@@ -65,7 +81,7 @@
     symbol = [NSString stringWithString:key];
   }
     
-    NSUInteger modifiers = [(SmartKeysView *)[self view] modifiers];
+    NSUInteger modifiers = [self.view modifiers];
     if (modifiers & KbdCtrlModifier) {
         symbol = [NSString stringWithFormat:@"^%@",symbol];
     } else if(modifiers & KbdAltModifier) {

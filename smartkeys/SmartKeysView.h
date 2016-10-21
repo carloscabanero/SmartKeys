@@ -45,10 +45,20 @@ typedef NS_OPTIONS(NSInteger, KbdModifiers) {
 };
 
 
+@interface SmartKey : NSObject
+
+@property (readonly) NSString *name;
+@property (readonly) NSString *symbol;
+
+-(id)initWithName:(NSString *)name symbol:(NSString *)symbol;
+
+@end
+
 @interface SmartKeysView : UIView<UIScrollViewDelegate>
 
 @property (readonly) NSUInteger modifiers;
 
 -(void)show;
+-(void)setNonModifiers:(NSArray <SmartKey *> *)keys;
 
 @end
