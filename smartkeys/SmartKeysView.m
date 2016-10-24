@@ -54,14 +54,30 @@ int const kNonModifierCount = 7;
 
 @end
 
-@interface NonModifierButton : UIButton
-
-@property (readonly) SmartKey *key;
-
-- (id)initWithSmartKey:(SmartKey *)key;
-
-@end
-
+//@interface DarkKeyButton : UIButton
+//@end
+//
+//@implementation DarkKeyButton
+//- (id)initWithCoder:(NSCoder *)aDecoder {
+//    self = [super initWithCoder:aDecoder];
+//    if (self) {
+//        self.backgroundColor = [UIColor darkGrayColor];
+//    }
+//    return self;
+//}
+//
+//- (void) setSelected:(BOOL)selected {
+//    [super setSelected:selected];
+//    
+//    if (selected) {
+//        self.backgroundColor = UIColorFromRGB(255, 130, 0);
+//    }
+//    else {
+//        self.backgroundColor = [UIColor darkGrayColor];
+//    }
+//}
+//
+//@end
 
 @implementation SmartKeysView {
   NSTimer *_timer;
@@ -75,7 +91,9 @@ int const kNonModifierCount = 7;
   NSArray <SmartKey *> *_nonModifiersKeys;
 }
 
+
 - (void)awakeFromNib {
+  [super awakeFromNib];
   self.translatesAutoresizingMaskIntoConstraints = NO;
   _nonModifierScrollView.translatesAutoresizingMaskIntoConstraints = NO;
   [self setupModifierButtons];
@@ -177,12 +195,12 @@ int const kNonModifierCount = 7;
   return stack;
 }
 
-- (void)nonModifierUp:(UIButton *)sender
+- (IBAction)nonModifierUp:(UIButton *)sender
 {
   [self.delegate symbolUp:sender.currentTitle];
 }
 
-- (void)nonModifierDown:(UIButton *)sender
+- (IBAction)nonModifierDown:(UIButton *)sender
 {
   [self.delegate symbolDown:sender.currentTitle];
 }
@@ -212,3 +230,8 @@ int const kNonModifierCount = 7;
 }
 
 @end
+
+// Button behaviors and view. view configuration.
+// Modifier buttons
+// Non-modifier buttons
+// "Alternative" / "More" button -> Allows the delegate to decide how to show the other possible interfaces it has
