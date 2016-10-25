@@ -28,6 +28,18 @@
                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
                                 </button>
+                                <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="W8w-2K-eEd">
+                                    <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <state key="normal" title="⎋">
+                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="nonModifierDown:" destination="i5M-Pr-FkT" eventType="touchDown" id="mm6-zV-wJM"/>
+                                        <action selector="nonModifierUp:" destination="i5M-Pr-FkT" eventType="touchUpOutside" id="3XP-TH-ns0"/>
+                                        <action selector="nonModifierUp:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="FfT-zf-Fzn"/>
+                                    </connections>
+                                </button>
                                 <button opaque="NO" alpha="0.84999999999999998" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="GpG-1n-e3f">
                                     <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -191,13 +203,6 @@
             <rect key="frame" x="0.0" y="0.0" width="353" height="36"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="Hx4-kJ-xbh">
-                    <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                    <state key="normal" title="⎋">
-                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </state>
-                </button>
                 <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="mqG-WJ-kux">
                     <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
