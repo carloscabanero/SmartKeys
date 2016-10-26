@@ -100,10 +100,6 @@ int const kNonModifierCount = 7;
 }
 
 - (void)setupModifierButtons {
-  [_ctrlButton setTitleColor:[UIColor lightGrayColor]
-                    forState:UIControlStateSelected];
-  [_altButton setTitleColor:[UIColor lightGrayColor]
-                   forState:UIControlStateSelected];
 
   UITapGestureRecognizer *ctrlTapGesture = [[UITapGestureRecognizer alloc]
       initWithTarget:self
