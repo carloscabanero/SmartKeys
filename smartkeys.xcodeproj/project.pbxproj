@@ -16,6 +16,7 @@
 		070005791D70800F0002B956 /* SmartKeys.xib in Resources */ = {isa = PBXBuildFile; fileRef = 070005741D70800F0002B956 /* SmartKeys.xib */; };
 		0700057A1D70800F0002B956 /* SmartKeysView.m in Sources */ = {isa = PBXBuildFile; fileRef = 070005751D70800F0002B956 /* SmartKeysView.m */; };
 		0700057B1D70800F0002B956 /* SmartKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 070005771D70800F0002B956 /* SmartKeys.m */; };
+		B76D43711DC0FED3004DF464 /* SKModifierButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B76D43701DC0FED3004DF464 /* SKModifierButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,8 @@
 		070005761D70800F0002B956 /* SmartKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmartKeys.h; sourceTree = "<group>"; };
 		070005771D70800F0002B956 /* SmartKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmartKeys.m; sourceTree = "<group>"; };
 		070005781D70800F0002B956 /* SmartKeysView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmartKeysView.h; sourceTree = "<group>"; };
+		B76D436F1DC0FED3004DF464 /* SKModifierButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKModifierButton.h; sourceTree = "<group>"; };
+		B76D43701DC0FED3004DF464 /* SKModifierButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKModifierButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +74,8 @@
 				070005751D70800F0002B956 /* SmartKeysView.m */,
 				070005761D70800F0002B956 /* SmartKeys.h */,
 				070005771D70800F0002B956 /* SmartKeys.m */,
+				B76D436F1DC0FED3004DF464 /* SKModifierButton.h */,
+				B76D43701DC0FED3004DF464 /* SKModifierButton.m */,
 				070005601D707F390002B956 /* AppDelegate.h */,
 				070005611D707F390002B956 /* AppDelegate.m */,
 				070005631D707F390002B956 /* ViewController.h */,
@@ -164,6 +169,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B76D43711DC0FED3004DF464 /* SKModifierButton.m in Sources */,
 				0700057A1D70800F0002B956 /* SmartKeysView.m in Sources */,
 				0700057B1D70800F0002B956 /* SmartKeys.m in Sources */,
 				070005651D707F390002B956 /* ViewController.m in Sources */,
