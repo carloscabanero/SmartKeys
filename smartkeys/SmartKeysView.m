@@ -30,6 +30,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "SmartKeysView.h"
+#import "SKNonModifierButton.h"
 
 NSString *const KbdLeftArrowKey = @"←";
 NSString *const KbdRightArrowKey = @"→";
@@ -178,7 +179,7 @@ int const kNonModifierCount = 7;
   stack.distribution = UIStackViewDistributionFillEqually;
 
   for (SmartKey *key in keys) {
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    SKNonModifierButton *button = [SKNonModifierButton buttonWithType:UIButtonTypeCustom];
     button.backgroundColor = [UIColor grayColor];
     [button setTitle:key.name forState:UIControlStateNormal];
     [stack addArrangedSubview:button];

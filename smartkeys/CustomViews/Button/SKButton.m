@@ -1,23 +1,21 @@
 //
-//  SKModifierButton.m
+//  SKButton.m
 //  smartkeys
 //
-//  Created by Atul M on 26/10/16.
+//  Created by Atul M on 27/10/16.
 //  Copyright © 2016 CARLOS CABANERO. All rights reserved.
 //
 
-#import "SKModifierButton.h"
+#import "SKButton.h"
 
-#define DEFAULT_BG_COLOR  [UIColor viewFlipsideBackgroundColor];
-#define SELECTED_BG_COLOR [UIColor blueColor]
-
-@implementation SKModifierButton
+@implementation SKButton
 @synthesize backgroundLayer;
 
--(void)setSelected:(BOOL)selected{
-    [super setSelected:selected];
-
+- (void)animatedButtonSelection:(BOOL)selected{
     if(selected){
+        if(self.backgroundLayer != nil){
+            [self.backgroundLayer removeFromSuperlayer];
+        }
         self.backgroundLayer = [[CALayer alloc]init];
         self.backgroundLayer.cornerRadius = 5;
         self.backgroundLayer.frame = CGRectMake(5, 5, self.frame.size.width-10, self.frame.size.height-10);
@@ -44,7 +42,6 @@
         }];
         [self.backgroundLayer addAnimation:theAnimation forKey:@"animateOpacity"];
         [CATransaction commit];
-
     }
 }
 
