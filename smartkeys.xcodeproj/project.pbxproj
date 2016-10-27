@@ -123,7 +123,7 @@
 				TargetAttributes = {
 					070005591D707F390002B956 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = HV2S48975V;
+						DevelopmentTeam = 696QR72UEM;
 					};
 				};
 			};
@@ -282,11 +282,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = HV2S48975V;
+				DEVELOPMENT_TEAM = 696QR72UEM;
 				INFOPLIST_FILE = smartkeys/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = carloscabanero.smartkeys;
+				PRODUCT_BUNDLE_IDENTIFIER = com.atul.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -295,11 +295,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = HV2S48975V;
+				DEVELOPMENT_TEAM = 696QR72UEM;
 				INFOPLIST_FILE = smartkeys/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = carloscabanero.smartkeys;
+				PRODUCT_BUNDLE_IDENTIFIER = com.atul.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

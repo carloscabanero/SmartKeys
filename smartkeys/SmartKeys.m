@@ -35,7 +35,8 @@
 static NSArray *HelperKeys = nil;
 static NSArray *ArrowKeys = nil;
 static NSArray *FKeys = nil;
-
+static NSArray *AlternateKeys = nil; // To hold Function Keys F1 - F12
+static NSArray *CursorKeys = nil;
 @implementation SmartKeys {
   NSTimer *_timer;
 }
@@ -68,6 +69,28 @@ static NSArray *FKeys = nil;
 		   [[SmartKey alloc]initWithName:KbdLeftArrowKey symbol:UIKeyInputLeftArrow],
 		   [[SmartKey alloc]initWithName:KbdRightArrowKey symbol:UIKeyInputRightArrow]
 		];
+    
+  AlternateKeys = @[
+          [[SmartKey alloc]initWithName:@"F1" symbol:@"F1"],
+          [[SmartKey alloc]initWithName:@"F2" symbol:@"F2"],
+          [[SmartKey alloc]initWithName:@"F3" symbol:@"F3"],
+          [[SmartKey alloc]initWithName:@"F4" symbol:@"F4"],
+          [[SmartKey alloc]initWithName:@"F5" symbol:@"F5"],
+          [[SmartKey alloc]initWithName:@"F6" symbol:@"F6"],
+          [[SmartKey alloc]initWithName:@"F7" symbol:@"F7"],
+          [[SmartKey alloc]initWithName:@"F8" symbol:@"F8"],
+          [[SmartKey alloc]initWithName:@"F9" symbol:@"F9"],
+          [[SmartKey alloc]initWithName:@"F10" symbol:@"F10"],
+          [[SmartKey alloc]initWithName:@"F11" symbol:@"F11"],
+          [[SmartKey alloc]initWithName:@"F12" symbol:@"F12"],
+          ];
+    
+  CursorKeys = @[
+         [[SmartKey alloc]initWithName:@"⇞" symbol:@"Pg Up"],
+         [[SmartKey alloc]initWithName:@"⇟" symbol:@"Pg Down"],
+         [[SmartKey alloc]initWithName:@"↖︎" symbol:@"Home"],
+         [[SmartKey alloc]initWithName:@"↘︎" symbol:@"End"],
+         ];
 }
 
 - (void)viewDidLoad 
