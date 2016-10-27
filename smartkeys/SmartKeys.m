@@ -45,7 +45,6 @@ static NSArray *FKeys = nil;
 + (void)initialize {
   // Make an object. Do not even there to use dicts
   HelperKeys = @[
-		 [[SmartKey alloc]initWithName:KbdEscKey symbol:UIKeyInputEscape], 
 		    [[SmartKey alloc] initWithName:KbdTabKey symbol:@"\t"],
 		    [[SmartKey alloc] initWithName:@"-" symbol:@"-"],
 		    [[SmartKey alloc] initWithName:@"_" symbol:@"_"],
@@ -100,7 +99,11 @@ static NSArray *FKeys = nil;
       return;
     }
   }
-
+    //Handling Esc key separately as it does not logically belong to either of the two arrays
+    if ([KbdEscKey isEqualToString:symbol]) {
+        _timer = [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(symbolEmit:) userInfo:UIKeyInputEscape repeats:YES];
+        [_timer fire];
+    }
 }
 
 - (void)symbolEmit:(NSTimer *)timer
