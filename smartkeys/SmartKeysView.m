@@ -30,12 +30,13 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "SmartKeysView.h"
+#import "SKNonModifierButton.h"
 
 NSString *const KbdLeftArrowKey = @"←";
 NSString *const KbdRightArrowKey = @"→";
 NSString *const KbdUpArrowKey = @"↑";
 NSString *const KbdDownArrowKey = @"↓";
-NSString *const KbdEscKey = @"⎋";
+NSString *const KbdEscKey = @"esc";
 NSString *const KbdTabKey = @"⇥";
 int const kNonModifierCount = 7;
 
@@ -100,10 +101,6 @@ int const kNonModifierCount = 7;
 }
 
 - (void)setupModifierButtons {
-  [_ctrlButton setTitleColor:[UIColor lightGrayColor]
-                    forState:UIControlStateSelected];
-  [_altButton setTitleColor:[UIColor lightGrayColor]
-                   forState:UIControlStateSelected];
 
   UITapGestureRecognizer *ctrlTapGesture = [[UITapGestureRecognizer alloc]
       initWithTarget:self
@@ -182,7 +179,7 @@ int const kNonModifierCount = 7;
   stack.distribution = UIStackViewDistributionFillEqually;
 
   for (SmartKey *key in keys) {
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    SKNonModifierButton *button = [SKNonModifierButton buttonWithType:UIButtonTypeCustom];
     button.backgroundColor = [UIColor grayColor];
     [button setTitle:key.name forState:UIControlStateNormal];
     [stack addArrangedSubview:button];

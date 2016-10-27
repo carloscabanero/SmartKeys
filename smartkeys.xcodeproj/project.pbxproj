@@ -16,6 +16,9 @@
 		070005791D70800F0002B956 /* SmartKeys.xib in Resources */ = {isa = PBXBuildFile; fileRef = 070005741D70800F0002B956 /* SmartKeys.xib */; };
 		0700057A1D70800F0002B956 /* SmartKeysView.m in Sources */ = {isa = PBXBuildFile; fileRef = 070005751D70800F0002B956 /* SmartKeysView.m */; };
 		0700057B1D70800F0002B956 /* SmartKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 070005771D70800F0002B956 /* SmartKeys.m */; };
+		B71EDACF1DC2774D001C3F6A /* SKModifierButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B71EDACC1DC2774D001C3F6A /* SKModifierButton.m */; };
+		B71EDAD01DC2774D001C3F6A /* SKNonModifierButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B71EDACE1DC2774D001C3F6A /* SKNonModifierButton.m */; };
+		B71EDAD31DC2775D001C3F6A /* SKButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B71EDAD21DC2775D001C3F6A /* SKButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,12 @@
 		070005761D70800F0002B956 /* SmartKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmartKeys.h; sourceTree = "<group>"; };
 		070005771D70800F0002B956 /* SmartKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmartKeys.m; sourceTree = "<group>"; };
 		070005781D70800F0002B956 /* SmartKeysView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmartKeysView.h; sourceTree = "<group>"; };
+		B71EDACB1DC2774D001C3F6A /* SKModifierButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKModifierButton.h; sourceTree = "<group>"; };
+		B71EDACC1DC2774D001C3F6A /* SKModifierButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKModifierButton.m; sourceTree = "<group>"; };
+		B71EDACD1DC2774D001C3F6A /* SKNonModifierButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKNonModifierButton.h; sourceTree = "<group>"; };
+		B71EDACE1DC2774D001C3F6A /* SKNonModifierButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKNonModifierButton.m; sourceTree = "<group>"; };
+		B71EDAD11DC2775D001C3F6A /* SKButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKButton.h; sourceTree = "<group>"; };
+		B71EDAD21DC2775D001C3F6A /* SKButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +85,7 @@
 				070005631D707F390002B956 /* ViewController.h */,
 				070005641D707F390002B956 /* ViewController.m */,
 				070005661D707F390002B956 /* Main.storyboard */,
+				B71EDAC91DC2774D001C3F6A /* CustomViews */,
 				070005691D707F390002B956 /* Assets.xcassets */,
 				0700056B1D707F390002B956 /* LaunchScreen.storyboard */,
 				0700056E1D707F390002B956 /* Info.plist */,
@@ -90,6 +100,27 @@
 				0700055E1D707F390002B956 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B71EDAC91DC2774D001C3F6A /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				B71EDACA1DC2774D001C3F6A /* Button */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		B71EDACA1DC2774D001C3F6A /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				B71EDAD11DC2775D001C3F6A /* SKButton.h */,
+				B71EDAD21DC2775D001C3F6A /* SKButton.m */,
+				B71EDACB1DC2774D001C3F6A /* SKModifierButton.h */,
+				B71EDACC1DC2774D001C3F6A /* SKModifierButton.m */,
+				B71EDACD1DC2774D001C3F6A /* SKNonModifierButton.h */,
+				B71EDACE1DC2774D001C3F6A /* SKNonModifierButton.m */,
+			);
+			path = Button;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,11 +195,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B71EDAD01DC2774D001C3F6A /* SKNonModifierButton.m in Sources */,
+				B71EDACF1DC2774D001C3F6A /* SKModifierButton.m in Sources */,
 				0700057A1D70800F0002B956 /* SmartKeysView.m in Sources */,
 				0700057B1D70800F0002B956 /* SmartKeys.m in Sources */,
 				070005651D707F390002B956 /* ViewController.m in Sources */,
 				070005621D707F390002B956 /* AppDelegate.m in Sources */,
 				0700055F1D707F390002B956 /* main.m in Sources */,
+				B71EDAD31DC2775D001C3F6A /* SKButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
