@@ -109,22 +109,20 @@ static NSArray *CursorKeys = nil;
 
 - (void)symbolDown:(NSString *)symbol
 {
-  for (SmartKey *key in HelperKeys) {
+    NSMutableArray *masterArray = [NSMutableArray array];
+    [masterArray addObjectsFromArray:HelperKeys];
+    [masterArray addObjectsFromArray:ArrowKeys];
+    [masterArray addObjectsFromArray:AlternateKeys];
+    [masterArray addObjectsFromArray:CursorKeys];
+    
+  for (SmartKey *key in masterArray) {
     if ([key.name isEqualToString:symbol]) {
       _timer = [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(symbolEmit:) userInfo:key.symbol repeats:YES];
       [_timer fire];
       return;
     }
   }
-
-  for (SmartKey *key in ArrowKeys) {
-    if ([key.name isEqualToString:symbol]) {
-      _timer = [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(symbolEmit:) userInfo:key.symbol repeats:YES];
-      [_timer fire];
-      return;
-    }
-  }
-    //Handling Esc key separately as it does not logically belong to either of the two arrays
+    //Handling Esc key separately as it does not logically belong to either of the above arrays
     if ([KbdEscKey isEqualToString:symbol]) {
         _timer = [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(symbolEmit:) userInfo:UIKeyInputEscape repeats:YES];
         [_timer fire];
