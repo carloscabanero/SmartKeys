@@ -87,6 +87,11 @@ int const kNonModifierCount = 7;
   __weak IBOutlet UIStackView *_stack;
   __weak IBOutlet UIScrollView *_nonModifierScrollView;
   __weak IBOutlet UIButton *_upArrowButton;
+    IBOutlet UIStackView *_arrowButtonStackView;
+    IBOutlet UIStackView *_cursorButtonStackView;
+    __weak IBOutlet UIView *_rightContainerView;
+
+    
   BOOL isLongPress;
   UIStackView *_nonModifiersStack;
   NSArray <SmartKey *> *_nonModifiersKeys;
@@ -132,6 +137,8 @@ int const kNonModifierCount = 7;
   [_altButton addGestureRecognizer:altTapGesture];
   [_altButton addGestureRecognizer:altLongPressGesture];
     [_altButton addObserver:self forKeyPath:@"selected" options:NSKeyValueObservingOptionOld|NSKeyValueObservingOptionNew context:nil];
+    
+    [_rightContainerView addSubview:_arrowButtonStackView];
 }
 
 - (NSUInteger)modifiers {
@@ -163,10 +170,16 @@ int const kNonModifierCount = 7;
     
     UIStackView *selectedStackView = nil;
     
-    if(type == SKNonModifierButtonTypeNormal){
+    if(type == SKNonModifierButtonTypeNormal){        
+        _cursorButtonStackView.hidden = YES;
+        _arrowButtonStackView.hidden = NO;
+
         selectedStackView = _nonModifiersStack;
         [_nonModifierScrollView addSubview:_nonModifiersStack];
     }else{
+        _cursorButtonStackView.hidden = NO;
+        _arrowButtonStackView.hidden = YES;
+        
         selectedStackView = _alternateKeysStack;
         [_nonModifierScrollView addSubview:_alternateKeysStack];
     }

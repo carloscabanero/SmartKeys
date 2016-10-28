@@ -70,65 +70,118 @@
                                 <outlet property="delegate" destination="i5M-Pr-FkT" id="x4m-ws-UiC"/>
                             </connections>
                         </scrollView>
-                        <stackView opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="o5R-mY-Oea">
+                        <stackView opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="TjB-pY-IRD">
                             <subviews>
-                                <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="8RZ-A0-yTp" customClass="SKNonModifierButton">
+                                <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="TEw-eu-2IQ" customClass="SKNonModifierButton">
                                     <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                     <state key="normal" title="↑">
                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
                                     <connections>
-                                        <action selector="nonModifierDown:" destination="i5M-Pr-FkT" eventType="touchDown" id="8hJ-OU-jh0"/>
-                                        <action selector="nonModifierUp:" destination="i5M-Pr-FkT" eventType="touchUpOutside" id="jFW-lF-hFN"/>
-                                        <action selector="nonModifierUp:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="orl-9h-6Qv"/>
+                                        <action selector="nonModifierDown:" destination="i5M-Pr-FkT" eventType="touchDown" id="YE1-7D-Ffx"/>
+                                        <action selector="nonModifierUp:" destination="i5M-Pr-FkT" eventType="touchUpOutside" id="Cez-Tc-V2w"/>
+                                        <action selector="nonModifierUp:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="kLK-5j-1Ah"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="bGu-3Y-xyl" customClass="SKNonModifierButton">
+                                <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="I4r-v5-rjW" customClass="SKNonModifierButton">
                                     <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                     <state key="normal" title="↓">
                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
                                     <connections>
-                                        <action selector="nonModifierDown:" destination="i5M-Pr-FkT" eventType="touchDown" id="Pg4-O9-hKM"/>
-                                        <action selector="nonModifierUp:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="561-MJ-bBB"/>
-                                        <action selector="nonModifierUp:" destination="i5M-Pr-FkT" eventType="touchUpOutside" id="rLb-r4-gUt"/>
+                                        <action selector="nonModifierDown:" destination="i5M-Pr-FkT" eventType="touchDown" id="H63-OR-Akm"/>
+                                        <action selector="nonModifierUp:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="JrE-bg-Krp"/>
+                                        <action selector="nonModifierUp:" destination="i5M-Pr-FkT" eventType="touchUpOutside" id="ntd-je-KL3"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="YR8-Kv-37f" customClass="SKNonModifierButton">
+                                <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="wVM-He-kuQ" customClass="SKNonModifierButton">
                                     <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                     <state key="normal" title="←">
                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
                                     <connections>
-                                        <action selector="nonModifierDown:" destination="i5M-Pr-FkT" eventType="touchDown" id="4Yo-x7-drl"/>
-                                        <action selector="nonModifierUp:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="DcM-os-ZgZ"/>
-                                        <action selector="nonModifierUp:" destination="i5M-Pr-FkT" eventType="touchUpOutside" id="fUx-O9-uqH"/>
+                                        <action selector="nonModifierDown:" destination="i5M-Pr-FkT" eventType="touchDown" id="3TL-ES-ZTN"/>
+                                        <action selector="nonModifierUp:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="C0V-u3-uDn"/>
+                                        <action selector="nonModifierUp:" destination="i5M-Pr-FkT" eventType="touchUpOutside" id="k8e-HX-gsB"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="HQL-Qw-FWv" customClass="SKNonModifierButton">
+                                <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="jHq-Xf-a8P" customClass="SKNonModifierButton">
                                     <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                     <state key="normal" title="→">
                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
                                     <connections>
-                                        <action selector="nonModifierDown:" destination="i5M-Pr-FkT" eventType="touchDown" id="xpf-zs-YR5"/>
-                                        <action selector="nonModifierUp:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="hfg-Xk-oqs"/>
-                                        <action selector="nonModifierUp:" destination="i5M-Pr-FkT" eventType="touchUpOutside" id="vbU-t3-VG7"/>
+                                        <action selector="nonModifierDown:" destination="i5M-Pr-FkT" eventType="touchDown" id="qEg-rK-Qml"/>
+                                        <action selector="nonModifierUp:" destination="i5M-Pr-FkT" eventType="touchUpOutside" id="dK3-Yz-4Mp"/>
+                                        <action selector="nonModifierUp:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="i8Z-00-oHj"/>
                                     </connections>
                                 </button>
                             </subviews>
                             <constraints>
-                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="136" id="H7b-Dr-muU"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="136" id="LFy-WL-fcF"/>
+                            </constraints>
+                        </stackView>
+                        <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="w9r-JX-7Hq">
+                            <subviews>
+                                <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="Vmi-ak-1ax" customClass="SKNonModifierButton">
+                                    <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <state key="normal" title="⇞">
+                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="nonModifierDown:" destination="i5M-Pr-FkT" eventType="touchDown" id="wjl-Cf-001"/>
+                                        <action selector="nonModifierUp:" destination="i5M-Pr-FkT" eventType="touchUpOutside" id="PEu-G3-PKv"/>
+                                        <action selector="nonModifierUp:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="ZfP-hk-E7H"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="gCx-Ud-Fml" customClass="SKNonModifierButton">
+                                    <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <state key="normal" title="⇟">
+                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="nonModifierDown:" destination="i5M-Pr-FkT" eventType="touchDown" id="VqH-kj-AYe"/>
+                                        <action selector="nonModifierUp:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="LkH-Vc-0va"/>
+                                        <action selector="nonModifierUp:" destination="i5M-Pr-FkT" eventType="touchUpOutside" id="mtV-vz-tJf"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="xm1-9X-5Bw" customClass="SKNonModifierButton">
+                                    <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <state key="normal" title="↖︎">
+                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="nonModifierDown:" destination="i5M-Pr-FkT" eventType="touchDown" id="SUu-Qu-Bms"/>
+                                        <action selector="nonModifierUp:" destination="i5M-Pr-FkT" eventType="touchUpOutside" id="5TB-MO-vFA"/>
+                                        <action selector="nonModifierUp:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="rJ5-NR-akb"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="lUK-qh-gaJ" customClass="SKNonModifierButton">
+                                    <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <state key="normal" title="↘︎">
+                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="nonModifierDown:" destination="i5M-Pr-FkT" eventType="touchDown" id="5a0-hU-5lO"/>
+                                        <action selector="nonModifierUp:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="j62-qc-NDQ"/>
+                                        <action selector="nonModifierUp:" destination="i5M-Pr-FkT" eventType="touchUpOutside" id="jjB-6X-UhM"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="136" id="3hx-0W-i7B"/>
                             </constraints>
                         </stackView>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="o5R-mY-Oea" firstAttribute="leading" secondItem="hpT-52-KRm" secondAttribute="trailing" id="B7H-9X-gFa"/>
-                        <constraint firstItem="kdC-6W-Bp4" firstAttribute="width" relation="greaterThanOrEqual" secondItem="o5R-mY-Oea" secondAttribute="width" priority="750" id="SNd-jj-CvP"/>
                         <constraint firstItem="hpT-52-KRm" firstAttribute="top" secondItem="6Kk-Wl-VMp" secondAttribute="top" constant="8" id="cUy-zf-R0N"/>
                         <constraint firstItem="hpT-52-KRm" firstAttribute="leading" secondItem="gZY-hv-cSn" secondAttribute="trailing" id="wnD-15-5bX"/>
                     </constraints>
@@ -143,10 +196,11 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="_altButton" destination="TSc-nI-KXb" id="i1z-EE-hMs"/>
+                <outlet property="_arrowButtonStackView" destination="TjB-pY-IRD" id="Qxw-Hx-gVa"/>
                 <outlet property="_ctrlButton" destination="sH7-VZ-MHD" id="Ahk-On-I7c"/>
+                <outlet property="_cursorButtonStackView" destination="w9r-JX-7Hq" id="Nb5-7g-eHn"/>
                 <outlet property="_nonModifierScrollView" destination="hpT-52-KRm" id="TbN-Or-ia8"/>
                 <outlet property="_stack" destination="6Kk-Wl-VMp" id="cVl-oS-iJx"/>
-                <outlet property="_upArrowButton" destination="8RZ-A0-yTp" id="KRM-H9-n8q"/>
             </connections>
             <point key="canvasLocation" x="696" y="250.5"/>
         </view>
