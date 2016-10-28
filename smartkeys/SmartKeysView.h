@@ -31,6 +31,10 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum{
+    SKNonModifierButtonTypeNormal,
+    SKNonModifierButtonTypeAlternate
+}SKNonModifierButtonType;
 
 extern NSString *const KbdLeftArrowKey;
 extern NSString *const KbdRightArrowKey;
@@ -68,5 +72,6 @@ typedef NS_OPTIONS(NSInteger, KbdModifiers) {
 
 -(void)show;
 -(void)setNonModifiers:(NSArray <SmartKey *> *)keys;
-
+- (void)setAlternateKeys:(NSArray <SmartKey *> *)keys;
+- (void)showNonModifierKeySection:(SKNonModifierButtonType)type;
 @end

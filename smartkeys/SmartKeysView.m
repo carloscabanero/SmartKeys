@@ -90,6 +90,10 @@ int const kNonModifierCount = 7;
   BOOL isLongPress;
   UIStackView *_nonModifiersStack;
   NSArray <SmartKey *> *_nonModifiersKeys;
+    
+  UIStackView *_alternateKeysStack;
+  NSArray <SmartKey *> *_alternateKeys;
+
 }
 
 
@@ -127,6 +131,7 @@ int const kNonModifierCount = 7;
 
   [_altButton addGestureRecognizer:altTapGesture];
   [_altButton addGestureRecognizer:altLongPressGesture];
+    [_altButton addObserver:self forKeyPath:@"selected" options:NSKeyValueObservingOptionOld|NSKeyValueObservingOptionNew context:nil];
 }
 
 - (NSUInteger)modifiers {
@@ -152,22 +157,44 @@ int const kNonModifierCount = 7;
   self.hidden = NO;
 }
 
+- (void)showNonModifierKeySection:(SKNonModifierButtonType)type{
+    [_nonModifiersStack removeFromSuperview];
+    [_alternateKeysStack removeFromSuperview];
+    
+    UIStackView *selectedStackView = nil;
+    
+    if(type == SKNonModifierButtonTypeNormal){
+        selectedStackView = _nonModifiersStack;
+        [_nonModifierScrollView addSubview:_nonModifiersStack];
+    }else{
+        selectedStackView = _alternateKeysStack;
+        [_nonModifierScrollView addSubview:_alternateKeysStack];
+    }
+    
+    // Constraints
+    selectedStackView.translatesAutoresizingMaskIntoConstraints = NO;
+    [selectedStackView.topAnchor constraintEqualToAnchor:_nonModifierScrollView.topAnchor].active = YES;
+    [selectedStackView.leadingAnchor constraintEqualToAnchor:_nonModifierScrollView.leadingAnchor].active = YES;
+    [selectedStackView.trailingAnchor constraintEqualToAnchor:_nonModifierScrollView.trailingAnchor].active = YES;
+    [selectedStackView.bottomAnchor constraintEqualToAnchor:_nonModifierScrollView.bottomAnchor].active = YES;
+    [selectedStackView.arrangedSubviews[0].widthAnchor constraintGreaterThanOrEqualToAnchor:_upArrowButton.widthAnchor multiplier:1].active = YES;
+
+}
+
 - (void)setNonModifiers:(NSArray <SmartKey *> *)keys
 {
   // TODO: Detach previous (if any)
   // Reattach new one
   _nonModifiersStack = [self smartKeysStackWith:keys];
   _nonModifiersKeys = keys;
-  
-  [_nonModifierScrollView addSubview:_nonModifiersStack];
-  
-  // Constraints
-  _nonModifiersStack.translatesAutoresizingMaskIntoConstraints = NO;
-  [_nonModifiersStack.topAnchor constraintEqualToAnchor:_nonModifierScrollView.topAnchor].active = YES;
-  [_nonModifiersStack.leadingAnchor constraintEqualToAnchor:_nonModifierScrollView.leadingAnchor].active = YES;
-  [_nonModifiersStack.trailingAnchor constraintEqualToAnchor:_nonModifierScrollView.trailingAnchor].active = YES;
-  [_nonModifiersStack.bottomAnchor constraintEqualToAnchor:_nonModifierScrollView.bottomAnchor].active = YES;
-  [_nonModifiersStack.arrangedSubviews[0].widthAnchor constraintGreaterThanOrEqualToAnchor:_upArrowButton.widthAnchor multiplier:1].active = YES;
+}
+
+- (void)setAlternateKeys:(NSArray <SmartKey *> *)keys
+{
+    // TODO: Detach previous (if any)
+    // Reattach new one
+    _alternateKeysStack = [self smartKeysStackWith:keys];
+    _alternateKeys = keys;
 }
 
 - (UIStackView *)smartKeysStackWith:(NSArray <SmartKey *> *)keys
@@ -225,6 +252,24 @@ int const kNonModifierCount = 7;
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
 }
+
+# pragma mark - Alt Button Methods
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
+    if(object == _altButton){
+        if([keyPath isEqualToString:@"selected"]){
+            if([change objectForKey:@"new"]){
+                int newValue = [[change objectForKey:@"new"]intValue];
+                if(newValue == 1){
+                    [self showNonModifierKeySection:SKNonModifierButtonTypeAlternate];
+                }else{
+                    [self showNonModifierKeySection:SKNonModifierButtonTypeNormal];
+                }
+            }
+        }
+    }
+}
+
 
 @end
 

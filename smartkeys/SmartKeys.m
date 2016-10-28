@@ -94,8 +94,10 @@ static NSArray *CursorKeys = nil;
 
 - (void)viewDidLoad 
 {
-  [self.view setNonModifiers:HelperKeys];
-  self.view.delegate = self;
+    [self.view setNonModifiers:HelperKeys];
+    [self.view setAlternateKeys:AlternateKeys];
+    [self.view showNonModifierKeySection:SKNonModifierButtonTypeNormal];
+    self.view.delegate = self;
 }
 
 - (void)symbolUp:(NSString *)symbol
